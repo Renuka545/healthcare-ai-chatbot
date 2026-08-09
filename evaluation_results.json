@@ -1,0 +1,863 @@
+{
+  "rule": {
+    "total_cases": 20,
+    "intent_accuracy": 80.0,
+    "tool_accuracy": 65.0,
+    "avg_latency_ms": 0.9,
+    "avg_quality_score": 0.79,
+    "method": "rule",
+    "category_breakdown": {
+      "Clear Requests": {
+        "count": 9.0,
+        "intent_accuracy": 77.8,
+        "tool_accuracy": 55.6,
+        "avg_latency_ms": 1.5,
+        "avg_quality_score": 0.72
+      },
+      "Emergency Triage Requests": {
+        "count": 3.0,
+        "intent_accuracy": 100.0,
+        "tool_accuracy": 100.0,
+        "avg_latency_ms": 0.0,
+        "avg_quality_score": 1.0
+      },
+      "Ambiguous Requests": {
+        "count": 4.0,
+        "intent_accuracy": 100.0,
+        "tool_accuracy": 75.0,
+        "avg_latency_ms": 1.1,
+        "avg_quality_score": 0.82
+      },
+      "Multi-step Requests": {
+        "count": 2.0,
+        "intent_accuracy": 50.0,
+        "tool_accuracy": 50.0,
+        "avg_latency_ms": 0.1,
+        "avg_quality_score": 0.7
+      },
+      "Sensitive Information Requests": {
+        "count": 2.0,
+        "intent_accuracy": 50.0,
+        "tool_accuracy": 50.0,
+        "avg_latency_ms": 0.1,
+        "avg_quality_score": 0.8
+      }
+    },
+    "test_results": [
+      {
+        "test_id": "TC-01",
+        "category": "Clear Requests",
+        "query": "Schedule an appointment with a cardiologist next Monday for Sarah Jenkins",
+        "expected_tool": "book_appointment",
+        "detected_tool": "book_appointment",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 4.21,
+        "quality_score": 0.9,
+        "method": "rule"
+      },
+      {
+        "test_id": "TC-02",
+        "category": "Clear Requests",
+        "query": "Show my recent lab results for blood test",
+        "expected_tool": "get_lab_results",
+        "detected_tool": "get_lab_results",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 0.14,
+        "quality_score": 0.9,
+        "method": "rule"
+      },
+      {
+        "test_id": "TC-03",
+        "category": "Clear Requests",
+        "query": "I need to refill my prescription for Atorvastatin",
+        "expected_tool": "request_prescription_refill",
+        "detected_tool": "request_prescription_refill",
+        "intent_correct": true,
+        "tool_correct": false,
+        "latency_ms": 0.57,
+        "quality_score": 0.5,
+        "method": "rule"
+      },
+      {
+        "test_id": "TC-04",
+        "category": "Clear Requests",
+        "query": "Reset my patient portal password",
+        "expected_tool": "create_support_ticket",
+        "detected_tool": "create_support_ticket",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 2.85,
+        "quality_score": 0.9,
+        "method": "rule"
+      },
+      {
+        "test_id": "TC-05",
+        "category": "Clear Requests",
+        "query": "Show my open support tickets",
+        "expected_tool": "list_support_tickets",
+        "detected_tool": "list_support_tickets",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 0.12,
+        "quality_score": 0.9,
+        "method": "rule"
+      },
+      {
+        "test_id": "TC-06",
+        "category": "Clear Requests",
+        "query": "What are the fasting rules for a lipid blood test?",
+        "expected_tool": "healthcare_rag_qa",
+        "detected_tool": "get_lab_results",
+        "intent_correct": false,
+        "tool_correct": false,
+        "latency_ms": 0.06,
+        "quality_score": 0.5,
+        "method": "rule"
+      },
+      {
+        "test_id": "TC-07",
+        "category": "Emergency Triage Requests",
+        "query": "I am experiencing severe chest pain radiating to my arm and severe shortness of breath!",
+        "expected_tool": "triage_emergency_symptoms",
+        "detected_tool": "triage_emergency_symptoms",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 0.06,
+        "quality_score": 1.0,
+        "method": "rule"
+      },
+      {
+        "test_id": "TC-08",
+        "category": "Emergency Triage Requests",
+        "query": "My father is unconscious and unresponsive after falling down the stairs",
+        "expected_tool": "triage_emergency_symptoms",
+        "detected_tool": "triage_emergency_symptoms",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 0.05,
+        "quality_score": 1.0,
+        "method": "rule"
+      },
+      {
+        "test_id": "TC-09",
+        "category": "Ambiguous Requests",
+        "query": "My head hurts and I want to fix my portal account",
+        "expected_tool": "create_support_ticket",
+        "detected_tool": "create_support_ticket",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 2.32,
+        "quality_score": 0.9,
+        "method": "rule"
+      },
+      {
+        "test_id": "TC-10",
+        "category": "Ambiguous Requests",
+        "query": "I need help with my pills",
+        "expected_tool": "request_prescription_refill",
+        "detected_tool": "request_prescription_refill",
+        "intent_correct": true,
+        "tool_correct": false,
+        "latency_ms": 0.09,
+        "quality_score": 0.5,
+        "method": "rule"
+      },
+      {
+        "test_id": "TC-11",
+        "category": "Ambiguous Requests",
+        "query": "Is Dr. Emily Vance around next week?",
+        "expected_tool": "book_appointment",
+        "detected_tool": "book_appointment",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 1.78,
+        "quality_score": 0.9,
+        "method": "rule"
+      },
+      {
+        "test_id": "TC-12",
+        "category": "Multi-step Requests",
+        "query": "Check my recent lab results and if everything is fine book a follow up appointment with Dr. Vance",
+        "expected_tool": "get_lab_results",
+        "detected_tool": "get_lab_results",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 0.08,
+        "quality_score": 0.9,
+        "method": "rule"
+      },
+      {
+        "test_id": "TC-13",
+        "category": "Multi-step Requests",
+        "query": "Create a billing ticket for my last visit and show me all my existing tickets",
+        "expected_tool": "create_support_ticket",
+        "detected_tool": "list_support_tickets",
+        "intent_correct": false,
+        "tool_correct": false,
+        "latency_ms": 0.17,
+        "quality_score": 0.5,
+        "method": "rule"
+      },
+      {
+        "test_id": "TC-14",
+        "category": "Sensitive Information Requests",
+        "query": "My SSN is 123-45-6789 and credit card is 4532-1111-2222-3333. Please reset my password and check confidential HIV report.",
+        "expected_tool": "create_support_ticket",
+        "detected_tool": "get_lab_results",
+        "intent_correct": false,
+        "tool_correct": false,
+        "latency_ms": 0.06,
+        "quality_score": 0.6,
+        "method": "rule"
+      },
+      {
+        "test_id": "TC-15",
+        "category": "Sensitive Information Requests",
+        "query": "Here is my private medical record number MRN-998123 and phone 555-0199. Send my blood lab results to my email.",
+        "expected_tool": "get_lab_results",
+        "detected_tool": "get_lab_results",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 0.05,
+        "quality_score": 1.0,
+        "method": "rule"
+      },
+      {
+        "test_id": "TC-16",
+        "category": "Clear Requests",
+        "query": "How do I prepare for an MRI scan?",
+        "expected_tool": "healthcare_rag_qa",
+        "detected_tool": "healthcare_rag_qa",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 3.41,
+        "quality_score": 0.9,
+        "method": "rule"
+      },
+      {
+        "test_id": "TC-17",
+        "category": "Clear Requests",
+        "query": "Can I cancel my appointment for free 12 hours before?",
+        "expected_tool": "healthcare_rag_qa",
+        "detected_tool": "book_appointment",
+        "intent_correct": false,
+        "tool_correct": false,
+        "latency_ms": 1.84,
+        "quality_score": 0.5,
+        "method": "rule"
+      },
+      {
+        "test_id": "TC-18",
+        "category": "Clear Requests",
+        "query": "Refill my Metformin 500mg prescription at Walgreens",
+        "expected_tool": "request_prescription_refill",
+        "detected_tool": "request_prescription_refill",
+        "intent_correct": true,
+        "tool_correct": false,
+        "latency_ms": 0.09,
+        "quality_score": 0.5,
+        "method": "rule"
+      },
+      {
+        "test_id": "TC-19",
+        "category": "Emergency Triage Requests",
+        "query": "Sudden paralysis on the right side of my face and inability to speak clearly",
+        "expected_tool": "triage_emergency_symptoms",
+        "detected_tool": "triage_emergency_symptoms",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 0.04,
+        "quality_score": 1.0,
+        "method": "rule"
+      },
+      {
+        "test_id": "TC-20",
+        "category": "Ambiguous Requests",
+        "query": "I am feeling unwell today",
+        "expected_tool": "triage_emergency_symptoms",
+        "detected_tool": "triage_emergency_symptoms",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 0.03,
+        "quality_score": 1.0,
+        "method": "rule"
+      }
+    ]
+  },
+  "llm": {
+    "total_cases": 20,
+    "intent_accuracy": 85.0,
+    "tool_accuracy": 70.0,
+    "avg_latency_ms": 43.05,
+    "avg_quality_score": 0.81,
+    "method": "llm",
+    "category_breakdown": {
+      "Clear Requests": {
+        "count": 9.0,
+        "intent_accuracy": 77.8,
+        "tool_accuracy": 55.6,
+        "avg_latency_ms": 43.1,
+        "avg_quality_score": 0.72
+      },
+      "Emergency Triage Requests": {
+        "count": 3.0,
+        "intent_accuracy": 100.0,
+        "tool_accuracy": 100.0,
+        "avg_latency_ms": 40.8,
+        "avg_quality_score": 1.0
+      },
+      "Ambiguous Requests": {
+        "count": 4.0,
+        "intent_accuracy": 100.0,
+        "tool_accuracy": 75.0,
+        "avg_latency_ms": 44.3,
+        "avg_quality_score": 0.82
+      },
+      "Multi-step Requests": {
+        "count": 2.0,
+        "intent_accuracy": 50.0,
+        "tool_accuracy": 50.0,
+        "avg_latency_ms": 41.0,
+        "avg_quality_score": 0.7
+      },
+      "Sensitive Information Requests": {
+        "count": 2.0,
+        "intent_accuracy": 100.0,
+        "tool_accuracy": 100.0,
+        "avg_latency_ms": 45.9,
+        "avg_quality_score": 1.0
+      }
+    },
+    "test_results": [
+      {
+        "test_id": "TC-01",
+        "category": "Clear Requests",
+        "query": "Schedule an appointment with a cardiologist next Monday for Sarah Jenkins",
+        "expected_tool": "book_appointment",
+        "detected_tool": "book_appointment",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 47.01,
+        "quality_score": 0.9,
+        "method": "llm"
+      },
+      {
+        "test_id": "TC-02",
+        "category": "Clear Requests",
+        "query": "Show my recent lab results for blood test",
+        "expected_tool": "get_lab_results",
+        "detected_tool": "get_lab_results",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 41.03,
+        "quality_score": 0.9,
+        "method": "llm"
+      },
+      {
+        "test_id": "TC-03",
+        "category": "Clear Requests",
+        "query": "I need to refill my prescription for Atorvastatin",
+        "expected_tool": "request_prescription_refill",
+        "detected_tool": "request_prescription_refill",
+        "intent_correct": true,
+        "tool_correct": false,
+        "latency_ms": 40.69,
+        "quality_score": 0.5,
+        "method": "llm"
+      },
+      {
+        "test_id": "TC-04",
+        "category": "Clear Requests",
+        "query": "Reset my patient portal password",
+        "expected_tool": "create_support_ticket",
+        "detected_tool": "create_support_ticket",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 46.19,
+        "quality_score": 0.9,
+        "method": "llm"
+      },
+      {
+        "test_id": "TC-05",
+        "category": "Clear Requests",
+        "query": "Show my open support tickets",
+        "expected_tool": "list_support_tickets",
+        "detected_tool": "list_support_tickets",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 40.71,
+        "quality_score": 0.9,
+        "method": "llm"
+      },
+      {
+        "test_id": "TC-06",
+        "category": "Clear Requests",
+        "query": "What are the fasting rules for a lipid blood test?",
+        "expected_tool": "healthcare_rag_qa",
+        "detected_tool": "get_lab_results",
+        "intent_correct": false,
+        "tool_correct": false,
+        "latency_ms": 40.72,
+        "quality_score": 0.5,
+        "method": "llm"
+      },
+      {
+        "test_id": "TC-07",
+        "category": "Emergency Triage Requests",
+        "query": "I am experiencing severe chest pain radiating to my arm and severe shortness of breath!",
+        "expected_tool": "triage_emergency_symptoms",
+        "detected_tool": "triage_emergency_symptoms",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 40.75,
+        "quality_score": 1.0,
+        "method": "llm"
+      },
+      {
+        "test_id": "TC-08",
+        "category": "Emergency Triage Requests",
+        "query": "My father is unconscious and unresponsive after falling down the stairs",
+        "expected_tool": "triage_emergency_symptoms",
+        "detected_tool": "triage_emergency_symptoms",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 40.68,
+        "quality_score": 1.0,
+        "method": "llm"
+      },
+      {
+        "test_id": "TC-09",
+        "category": "Ambiguous Requests",
+        "query": "My head hurts and I want to fix my portal account",
+        "expected_tool": "create_support_ticket",
+        "detected_tool": "create_support_ticket",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 47.13,
+        "quality_score": 0.9,
+        "method": "llm"
+      },
+      {
+        "test_id": "TC-10",
+        "category": "Ambiguous Requests",
+        "query": "I need help with my pills",
+        "expected_tool": "request_prescription_refill",
+        "detected_tool": "request_prescription_refill",
+        "intent_correct": true,
+        "tool_correct": false,
+        "latency_ms": 40.97,
+        "quality_score": 0.5,
+        "method": "llm"
+      },
+      {
+        "test_id": "TC-11",
+        "category": "Ambiguous Requests",
+        "query": "Is Dr. Emily Vance around next week?",
+        "expected_tool": "book_appointment",
+        "detected_tool": "book_appointment",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 48.37,
+        "quality_score": 0.9,
+        "method": "llm"
+      },
+      {
+        "test_id": "TC-12",
+        "category": "Multi-step Requests",
+        "query": "Check my recent lab results and if everything is fine book a follow up appointment with Dr. Vance",
+        "expected_tool": "get_lab_results",
+        "detected_tool": "get_lab_results",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 41.05,
+        "quality_score": 0.9,
+        "method": "llm"
+      },
+      {
+        "test_id": "TC-13",
+        "category": "Multi-step Requests",
+        "query": "Create a billing ticket for my last visit and show me all my existing tickets",
+        "expected_tool": "create_support_ticket",
+        "detected_tool": "list_support_tickets",
+        "intent_correct": false,
+        "tool_correct": false,
+        "latency_ms": 40.95,
+        "quality_score": 0.5,
+        "method": "llm"
+      },
+      {
+        "test_id": "TC-14",
+        "category": "Sensitive Information Requests",
+        "query": "My SSN is 123-45-6789 and credit card is 4532-1111-2222-3333. Please reset my password and check confidential HIV report.",
+        "expected_tool": "create_support_ticket",
+        "detected_tool": "create_support_ticket",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 48.64,
+        "quality_score": 1.0,
+        "method": "llm"
+      },
+      {
+        "test_id": "TC-15",
+        "category": "Sensitive Information Requests",
+        "query": "Here is my private medical record number MRN-998123 and phone 555-0199. Send my blood lab results to my email.",
+        "expected_tool": "get_lab_results",
+        "detected_tool": "get_lab_results",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 43.15,
+        "quality_score": 1.0,
+        "method": "llm"
+      },
+      {
+        "test_id": "TC-16",
+        "category": "Clear Requests",
+        "query": "How do I prepare for an MRI scan?",
+        "expected_tool": "healthcare_rag_qa",
+        "detected_tool": "healthcare_rag_qa",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 46.36,
+        "quality_score": 0.9,
+        "method": "llm"
+      },
+      {
+        "test_id": "TC-17",
+        "category": "Clear Requests",
+        "query": "Can I cancel my appointment for free 12 hours before?",
+        "expected_tool": "healthcare_rag_qa",
+        "detected_tool": "book_appointment",
+        "intent_correct": false,
+        "tool_correct": false,
+        "latency_ms": 44.25,
+        "quality_score": 0.5,
+        "method": "llm"
+      },
+      {
+        "test_id": "TC-18",
+        "category": "Clear Requests",
+        "query": "Refill my Metformin 500mg prescription at Walgreens",
+        "expected_tool": "request_prescription_refill",
+        "detected_tool": "request_prescription_refill",
+        "intent_correct": true,
+        "tool_correct": false,
+        "latency_ms": 40.66,
+        "quality_score": 0.5,
+        "method": "llm"
+      },
+      {
+        "test_id": "TC-19",
+        "category": "Emergency Triage Requests",
+        "query": "Sudden paralysis on the right side of my face and inability to speak clearly",
+        "expected_tool": "triage_emergency_symptoms",
+        "detected_tool": "triage_emergency_symptoms",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 40.9,
+        "quality_score": 1.0,
+        "method": "llm"
+      },
+      {
+        "test_id": "TC-20",
+        "category": "Ambiguous Requests",
+        "query": "I am feeling unwell today",
+        "expected_tool": "triage_emergency_symptoms",
+        "detected_tool": "triage_emergency_symptoms",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 40.87,
+        "quality_score": 1.0,
+        "method": "llm"
+      }
+    ]
+  },
+  "hybrid": {
+    "total_cases": 20,
+    "intent_accuracy": 80.0,
+    "tool_accuracy": 65.0,
+    "avg_latency_ms": 1.29,
+    "avg_quality_score": 0.79,
+    "method": "hybrid",
+    "category_breakdown": {
+      "Clear Requests": {
+        "count": 9.0,
+        "intent_accuracy": 77.8,
+        "tool_accuracy": 55.6,
+        "avg_latency_ms": 2.1,
+        "avg_quality_score": 0.72
+      },
+      "Emergency Triage Requests": {
+        "count": 3.0,
+        "intent_accuracy": 100.0,
+        "tool_accuracy": 100.0,
+        "avg_latency_ms": 0.1,
+        "avg_quality_score": 1.0
+      },
+      "Ambiguous Requests": {
+        "count": 4.0,
+        "intent_accuracy": 100.0,
+        "tool_accuracy": 75.0,
+        "avg_latency_ms": 1.6,
+        "avg_quality_score": 0.82
+      },
+      "Multi-step Requests": {
+        "count": 2.0,
+        "intent_accuracy": 50.0,
+        "tool_accuracy": 50.0,
+        "avg_latency_ms": 0.1,
+        "avg_quality_score": 0.7
+      },
+      "Sensitive Information Requests": {
+        "count": 2.0,
+        "intent_accuracy": 50.0,
+        "tool_accuracy": 50.0,
+        "avg_latency_ms": 0.1,
+        "avg_quality_score": 0.8
+      }
+    },
+    "test_results": [
+      {
+        "test_id": "TC-01",
+        "category": "Clear Requests",
+        "query": "Schedule an appointment with a cardiologist next Monday for Sarah Jenkins",
+        "expected_tool": "book_appointment",
+        "detected_tool": "book_appointment",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 8.22,
+        "quality_score": 0.9,
+        "method": "hybrid"
+      },
+      {
+        "test_id": "TC-02",
+        "category": "Clear Requests",
+        "query": "Show my recent lab results for blood test",
+        "expected_tool": "get_lab_results",
+        "detected_tool": "get_lab_results",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 0.38,
+        "quality_score": 0.9,
+        "method": "hybrid"
+      },
+      {
+        "test_id": "TC-03",
+        "category": "Clear Requests",
+        "query": "I need to refill my prescription for Atorvastatin",
+        "expected_tool": "request_prescription_refill",
+        "detected_tool": "request_prescription_refill",
+        "intent_correct": true,
+        "tool_correct": false,
+        "latency_ms": 0.27,
+        "quality_score": 0.5,
+        "method": "hybrid"
+      },
+      {
+        "test_id": "TC-04",
+        "category": "Clear Requests",
+        "query": "Reset my patient portal password",
+        "expected_tool": "create_support_ticket",
+        "detected_tool": "create_support_ticket",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 6.08,
+        "quality_score": 0.9,
+        "method": "hybrid"
+      },
+      {
+        "test_id": "TC-05",
+        "category": "Clear Requests",
+        "query": "Show my open support tickets",
+        "expected_tool": "list_support_tickets",
+        "detected_tool": "list_support_tickets",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 0.16,
+        "quality_score": 0.9,
+        "method": "hybrid"
+      },
+      {
+        "test_id": "TC-06",
+        "category": "Clear Requests",
+        "query": "What are the fasting rules for a lipid blood test?",
+        "expected_tool": "healthcare_rag_qa",
+        "detected_tool": "get_lab_results",
+        "intent_correct": false,
+        "tool_correct": false,
+        "latency_ms": 0.11,
+        "quality_score": 0.5,
+        "method": "hybrid"
+      },
+      {
+        "test_id": "TC-07",
+        "category": "Emergency Triage Requests",
+        "query": "I am experiencing severe chest pain radiating to my arm and severe shortness of breath!",
+        "expected_tool": "triage_emergency_symptoms",
+        "detected_tool": "triage_emergency_symptoms",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 0.13,
+        "quality_score": 1.0,
+        "method": "hybrid"
+      },
+      {
+        "test_id": "TC-08",
+        "category": "Emergency Triage Requests",
+        "query": "My father is unconscious and unresponsive after falling down the stairs",
+        "expected_tool": "triage_emergency_symptoms",
+        "detected_tool": "triage_emergency_symptoms",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 0.1,
+        "quality_score": 1.0,
+        "method": "hybrid"
+      },
+      {
+        "test_id": "TC-09",
+        "category": "Ambiguous Requests",
+        "query": "My head hurts and I want to fix my portal account",
+        "expected_tool": "create_support_ticket",
+        "detected_tool": "create_support_ticket",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 3.11,
+        "quality_score": 0.9,
+        "method": "hybrid"
+      },
+      {
+        "test_id": "TC-10",
+        "category": "Ambiguous Requests",
+        "query": "I need help with my pills",
+        "expected_tool": "request_prescription_refill",
+        "detected_tool": "request_prescription_refill",
+        "intent_correct": true,
+        "tool_correct": false,
+        "latency_ms": 0.12,
+        "quality_score": 0.5,
+        "method": "hybrid"
+      },
+      {
+        "test_id": "TC-11",
+        "category": "Ambiguous Requests",
+        "query": "Is Dr. Emily Vance around next week?",
+        "expected_tool": "book_appointment",
+        "detected_tool": "book_appointment",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 3.05,
+        "quality_score": 0.9,
+        "method": "hybrid"
+      },
+      {
+        "test_id": "TC-12",
+        "category": "Multi-step Requests",
+        "query": "Check my recent lab results and if everything is fine book a follow up appointment with Dr. Vance",
+        "expected_tool": "get_lab_results",
+        "detected_tool": "get_lab_results",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 0.11,
+        "quality_score": 0.9,
+        "method": "hybrid"
+      },
+      {
+        "test_id": "TC-13",
+        "category": "Multi-step Requests",
+        "query": "Create a billing ticket for my last visit and show me all my existing tickets",
+        "expected_tool": "create_support_ticket",
+        "detected_tool": "list_support_tickets",
+        "intent_correct": false,
+        "tool_correct": false,
+        "latency_ms": 0.05,
+        "quality_score": 0.5,
+        "method": "hybrid"
+      },
+      {
+        "test_id": "TC-14",
+        "category": "Sensitive Information Requests",
+        "query": "My SSN is 123-45-6789 and credit card is 4532-1111-2222-3333. Please reset my password and check confidential HIV report.",
+        "expected_tool": "create_support_ticket",
+        "detected_tool": "get_lab_results",
+        "intent_correct": false,
+        "tool_correct": false,
+        "latency_ms": 0.06,
+        "quality_score": 0.6,
+        "method": "hybrid"
+      },
+      {
+        "test_id": "TC-15",
+        "category": "Sensitive Information Requests",
+        "query": "Here is my private medical record number MRN-998123 and phone 555-0199. Send my blood lab results to my email.",
+        "expected_tool": "get_lab_results",
+        "detected_tool": "get_lab_results",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 0.05,
+        "quality_score": 1.0,
+        "method": "hybrid"
+      },
+      {
+        "test_id": "TC-16",
+        "category": "Clear Requests",
+        "query": "How do I prepare for an MRI scan?",
+        "expected_tool": "healthcare_rag_qa",
+        "detected_tool": "healthcare_rag_qa",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 1.17,
+        "quality_score": 0.9,
+        "method": "hybrid"
+      },
+      {
+        "test_id": "TC-17",
+        "category": "Clear Requests",
+        "query": "Can I cancel my appointment for free 12 hours before?",
+        "expected_tool": "healthcare_rag_qa",
+        "detected_tool": "book_appointment",
+        "intent_correct": false,
+        "tool_correct": false,
+        "latency_ms": 2.5,
+        "quality_score": 0.5,
+        "method": "hybrid"
+      },
+      {
+        "test_id": "TC-18",
+        "category": "Clear Requests",
+        "query": "Refill my Metformin 500mg prescription at Walgreens",
+        "expected_tool": "request_prescription_refill",
+        "detected_tool": "request_prescription_refill",
+        "intent_correct": true,
+        "tool_correct": false,
+        "latency_ms": 0.11,
+        "quality_score": 0.5,
+        "method": "hybrid"
+      },
+      {
+        "test_id": "TC-19",
+        "category": "Emergency Triage Requests",
+        "query": "Sudden paralysis on the right side of my face and inability to speak clearly",
+        "expected_tool": "triage_emergency_symptoms",
+        "detected_tool": "triage_emergency_symptoms",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 0.05,
+        "quality_score": 1.0,
+        "method": "hybrid"
+      },
+      {
+        "test_id": "TC-20",
+        "category": "Ambiguous Requests",
+        "query": "I am feeling unwell today",
+        "expected_tool": "triage_emergency_symptoms",
+        "detected_tool": "triage_emergency_symptoms",
+        "intent_correct": true,
+        "tool_correct": true,
+        "latency_ms": 0.04,
+        "quality_score": 1.0,
+        "method": "hybrid"
+      }
+    ]
+  }
+}

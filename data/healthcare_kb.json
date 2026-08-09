@@ -1,0 +1,62 @@
+[
+  {
+    "id": "faq-001",
+    "title": "Fasting Requirements for Blood Tests",
+    "category": "Lab Preparation",
+    "content": "For lipid panels, fasting glucose, and metabolic panels, patients must fast for 8 to 12 hours prior to blood draw. Only plain water is permitted. Avoid coffee, tea, juice, and smoking. Continue taking prescribed medications unless specifically instructed otherwise by your physician."
+  },
+  {
+    "id": "faq-002",
+    "title": "How to Prepare for an MRI Scan",
+    "category": "Imaging Procedures",
+    "content": "Please arrive 30 minutes before your scheduled MRI. Remove all metallic objects including jewelry, watches, body piercings, and hairpins. Wear comfortable, metal-free clothing. Notify the technologist if you have a pacemaker, metal implants, claustrophobia, or pregnancy."
+  },
+  {
+    "id": "faq-003",
+    "title": "Prescription Refill Policy & Processing Times",
+    "category": "Pharmacy",
+    "content": "Prescription refill requests generally take 24 to 48 hours for physician approval. Controlled substances (such as opioids or ADHD medications) require explicit doctor review and cannot be auto-refilled. Patients can track request status online or via the clinic portal."
+  },
+  {
+    "id": "faq-004",
+    "title": "Understanding Cholesterol Blood Test Results",
+    "category": "Lab Results Guidance",
+    "content": "Total Cholesterol ideal level is under 200 mg/dL. LDL ('bad' cholesterol) should ideally be under 100 mg/dL. HDL ('good' cholesterol) should be 50 mg/dL or higher. Triglycerides should be under 150 mg/dL. Higher LDL or Triglyceride levels may indicate cardiovascular risk and warrant dietary modifications or statin therapy."
+  },
+  {
+    "id": "faq-005",
+    "title": "Appointment Cancellation & Rescheduling Policy",
+    "category": "Clinic Policies",
+    "content": "Patients may cancel or reschedule appointments without penalty up to 24 hours prior to the scheduled time. Cancellations made less than 24 hours in advance or missed appointments ('no-shows') may incur a $50 administrative fee."
+  },
+  {
+    "id": "faq-006",
+    "title": "Accepted Health Insurance & Billing FAQ",
+    "category": "Billing & Insurance",
+    "content": "We accept major insurance plans including Blue Cross Blue Shield, Aetna, Cigna, Medicare, and UnitedHealthcare. Co-payments are due at the time of service. For out-of-network services, itemized superbills can be generated upon request for direct insurance reimbursement."
+  },
+  {
+    "id": "faq-007",
+    "title": "Flu & COVID-19 Vaccine Scheduling",
+    "category": "Preventative Care",
+    "content": "Annual Influenza and COVID-19 booster vaccines are available for all patients aged 6 months and older. Vaccines can be scheduled online or walk-in at our Urgent Care center. Bring your insurance card and government ID."
+  },
+  {
+    "id": "faq-008",
+    "title": "Patient Portal Password Reset & Account Recovery",
+    "category": "Technical Support",
+    "content": "To reset your patient portal password, click 'Forgot Password' on the login screen. An authentication link will be emailed to your registered email address. For account lockouts due to multiple failed attempts, contact the Help Desk ticket system."
+  },
+  {
+    "id": "faq-009",
+    "title": "High Blood Pressure (Hypertension) Guidelines",
+    "category": "Clinical Knowledge",
+    "content": "Normal blood pressure is systolic below 120 mmHg and diastolic below 80 mmHg. Stage 1 Hypertension is 130-139 / 80-89 mmHg. If blood pressure exceeds 180/120 mmHg, seek immediate medical attention as this constitutes a hypertensive crisis."
+  },
+  {
+    "id": "faq-010",
+    "title": "Pediatric Care & Specialist Referrals",
+    "category": "Specialty Referrals",
+    "content": "Referrals to pediatric specialists (pediatric cardiology, neurology, allergy) require a primary care physician (PCP) evaluation first. Once placed, referral processing takes 3-5 business days before scheduling with the specialty clinic."
+  }
+]

@@ -1,0 +1,1659 @@
+{
+  "patients": [
+    {
+      "patient_id": "P-1001",
+      "name": "Sarah Jenkins",
+      "dob": "1985-04-12",
+      "email": "sarah.j@example.com",
+      "primary_doctor": "Dr. Emily Vance (Cardiology)"
+    },
+    {
+      "patient_id": "P-1002",
+      "name": "Robert Chen",
+      "dob": "1972-09-28",
+      "email": "r.chen@example.com",
+      "primary_doctor": "Dr. Marcus Thorne (Internal Medicine)"
+    }
+  ],
+  "lab_results": [
+    {
+      "lab_id": "LAB-8821",
+      "patient_id": "P-1001",
+      "test_name": "Comprehensive Metabolic & Lipid Panel",
+      "date": "2026-07-20",
+      "status": "Completed",
+      "summary": "Total Cholesterol: 195 mg/dL (Normal), LDL: 110 mg/dL (Slightly Elevated), HDL: 58 mg/dL (Optimal), Triglycerides: 135 mg/dL (Normal). Glucose: 92 mg/dL (Normal).",
+      "doctor_notes": "Lipid panel looks stable overall. Continue low-sodium diet and daily walking."
+    },
+    {
+      "lab_id": "LAB-8822",
+      "patient_id": "P-1002",
+      "test_name": "HbA1c & Fasting Blood Sugar",
+      "date": "2026-08-01",
+      "status": "Completed",
+      "summary": "HbA1c: 6.2% (Prediabetes range), Fasting Glucose: 115 mg/dL.",
+      "doctor_notes": "Recommend dietary consultation and 30 minutes daily moderate exercise."
+    }
+  ],
+  "appointments": [
+    {
+      "appointment_id": "APT-4D09",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily",
+      "specialty": "General Medicine",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-10 00:01"
+    },
+    {
+      "appointment_id": "APT-A2DA",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-10 00:01"
+    },
+    {
+      "appointment_id": "APT-30DC",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Routine Checkup",
+      "created_at": "2026-08-09 23:48"
+    },
+    {
+      "appointment_id": "APT-8BA3",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily",
+      "specialty": "General Medicine",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-09 23:48"
+    },
+    {
+      "appointment_id": "APT-B1AA",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-09 23:47"
+    },
+    {
+      "appointment_id": "APT-479D",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-09 23:47"
+    },
+    {
+      "appointment_id": "APT-5894",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily",
+      "specialty": "General Medicine",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-09 23:47"
+    },
+    {
+      "appointment_id": "APT-18F5",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-09 23:47"
+    },
+    {
+      "appointment_id": "APT-A53B",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Routine Checkup",
+      "created_at": "2026-08-09 23:47"
+    },
+    {
+      "appointment_id": "APT-94BC",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Routine Checkup",
+      "created_at": "2026-08-09 23:47"
+    },
+    {
+      "appointment_id": "APT-1BC9",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Routine Checkup",
+      "created_at": "2026-08-09 23:47"
+    },
+    {
+      "appointment_id": "APT-4626",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-09 23:47"
+    },
+    {
+      "appointment_id": "APT-545B",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily",
+      "specialty": "General Medicine",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-09 23:47"
+    },
+    {
+      "appointment_id": "APT-16BD",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-09 23:47"
+    },
+    {
+      "appointment_id": "APT-0C2B",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-09 23:39"
+    },
+    {
+      "appointment_id": "APT-6CC4",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-09 23:38"
+    },
+    {
+      "appointment_id": "APT-40AE",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Routine Checkup",
+      "created_at": "2026-08-09 23:38"
+    },
+    {
+      "appointment_id": "APT-E252",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-09 23:37"
+    },
+    {
+      "appointment_id": "APT-3935",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-09 23:35"
+    },
+    {
+      "appointment_id": "APT-5604",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-09 23:35"
+    },
+    {
+      "appointment_id": "APT-72B0",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-09 23:35"
+    },
+    {
+      "appointment_id": "APT-295C",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-09 23:28"
+    },
+    {
+      "appointment_id": "APT-6A3E",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily",
+      "specialty": "General Medicine",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-09 23:28"
+    },
+    {
+      "appointment_id": "APT-6AF4",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-09 23:28"
+    },
+    {
+      "appointment_id": "APT-7D17",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Routine Checkup",
+      "created_at": "2026-08-09 23:28"
+    },
+    {
+      "appointment_id": "APT-BD95",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Routine Checkup",
+      "created_at": "2026-08-09 23:28"
+    },
+    {
+      "appointment_id": "APT-0E34",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Routine Checkup",
+      "created_at": "2026-08-09 23:28"
+    },
+    {
+      "appointment_id": "APT-4699",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-09 23:28"
+    },
+    {
+      "appointment_id": "APT-51AE",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily",
+      "specialty": "General Medicine",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-09 23:28"
+    },
+    {
+      "appointment_id": "APT-3636",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-09 23:28"
+    },
+    {
+      "appointment_id": "APT-9D47",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-08 15:44"
+    },
+    {
+      "appointment_id": "APT-29E7",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily",
+      "specialty": "General Medicine",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-08 15:44"
+    },
+    {
+      "appointment_id": "APT-22AA",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-08 15:44"
+    },
+    {
+      "appointment_id": "APT-6797",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Routine Checkup",
+      "created_at": "2026-08-08 15:44"
+    },
+    {
+      "appointment_id": "APT-37F1",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Routine Checkup",
+      "created_at": "2026-08-08 15:44"
+    },
+    {
+      "appointment_id": "APT-8857",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Routine Checkup",
+      "created_at": "2026-08-08 15:44"
+    },
+    {
+      "appointment_id": "APT-50A9",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-08 15:44"
+    },
+    {
+      "appointment_id": "APT-BE12",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily",
+      "specialty": "General Medicine",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-08 15:44"
+    },
+    {
+      "appointment_id": "APT-D3E6",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-08 15:44"
+    },
+    {
+      "appointment_id": "APT-8810",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-08 15:35"
+    },
+    {
+      "appointment_id": "APT-A02D",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily",
+      "specialty": "General Medicine",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-08 15:35"
+    },
+    {
+      "appointment_id": "APT-52CE",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "2026-08-17 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment",
+      "created_at": "2026-08-08 15:35"
+    },
+    {
+      "appointment_id": "APT-501",
+      "patient_id": "P-1001",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "2026-08-15 10:30 AM",
+      "status": "Confirmed",
+      "reason": "Routine Annual Cardiology Checkup"
+    },
+    {
+      "appointment_id": "APT-2DFF",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-669F",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Vance",
+      "specialty": "General Medicine",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-BDE6",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-FE9A",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-1C06",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Routine Checkup"
+    },
+    {
+      "appointment_id": "APT-21DC",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Routine Checkup"
+    },
+    {
+      "appointment_id": "APT-A985",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-F873",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Vance",
+      "specialty": "General Medicine",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-E892",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-E3B2",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-16B3",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-7A91",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Vance",
+      "specialty": "General Medicine",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-FE24",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-8BBF",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-4246",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Routine Checkup"
+    },
+    {
+      "appointment_id": "APT-91C2",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Routine Checkup"
+    },
+    {
+      "appointment_id": "APT-3F2C",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-1F0D",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Vance",
+      "specialty": "General Medicine",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-D032",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-016A",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-F78E",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-FE5A",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily",
+      "specialty": "General Medicine",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-A1FE",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-52D1",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Routine Checkup"
+    },
+    {
+      "appointment_id": "APT-CD9B",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Routine Checkup"
+    },
+    {
+      "appointment_id": "APT-461C",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Routine Checkup"
+    },
+    {
+      "appointment_id": "APT-0AC5",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-B478",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily",
+      "specialty": "General Medicine",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-FA37",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-880D",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-15A4",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily",
+      "specialty": "General Medicine",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-3FDF",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-70F6",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Routine Checkup"
+    },
+    {
+      "appointment_id": "APT-A04B",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Routine Checkup"
+    },
+    {
+      "appointment_id": "APT-E443",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Routine Checkup"
+    },
+    {
+      "appointment_id": "APT-C3A7",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-0168",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily",
+      "specialty": "General Medicine",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-8701",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-9AE9",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "Cardiology",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    },
+    {
+      "appointment_id": "APT-28D6",
+      "patient_id": "P-1001",
+      "patient_name": "Sarah Jenkins",
+      "doctor_name": "Dr. Emily Vance",
+      "specialty": "General Medicine",
+      "date_time": "Next Monday 10:00 AM",
+      "status": "Confirmed",
+      "reason": "Patient requested appointment"
+    }
+  ],
+  "prescriptions": [
+    {
+      "rx_id": "RX-4009",
+      "patient_id": "P-1001",
+      "medication": "Atorvastatin 10mg",
+      "dosage": "1 tablet daily at bedtime",
+      "refills_remaining": 0,
+      "pharmacy": "CVS Pharmacy #4821"
+    },
+    {
+      "rx_id": "RX-4010",
+      "patient_id": "P-1002",
+      "medication": "Metformin 500mg",
+      "dosage": "1 tablet twice daily with meals",
+      "refills_remaining": 1,
+      "pharmacy": "Walgreens Pharmacy #1092"
+    }
+  ],
+  "tickets": [
+    {
+      "ticket_id": "TCK-BEB6",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "Reset my patient portal password",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-09 23:57",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-FD09",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "Reset my patient portal password",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-09 23:48",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-C254",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "My head hurts and I want to fix my portal account",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-09 23:47",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-A356",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "Reset my patient portal password",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-09 23:47",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-2ACC",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support",
+      "subject": "Patient Query",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-09 23:47",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-5E20",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support",
+      "subject": "Patient Query",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-09 23:47",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-6E9D",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support",
+      "subject": "Patient Query",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-09 23:47",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-C64E",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "My head hurts and I want to fix my portal account",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-09 23:47",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-263C",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "Reset my patient portal password",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-09 23:47",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-E3C6",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "Reset my patient portal password",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-09 23:38",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-C094",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "Reset my patient portal password",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-09 23:31",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-422E",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "My head hurts and I want to fix my portal account",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-09 23:28",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-FB9A",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "Reset my patient portal password",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-09 23:28",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-CDF9",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support",
+      "subject": "Patient Query",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-09 23:28",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-8E9C",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support",
+      "subject": "Patient Query",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-09 23:28",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-0534",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support",
+      "subject": "Patient Query",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-09 23:28",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-5EB4",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "My head hurts and I want to fix my portal account",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-09 23:28",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-FC0E",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "Reset my patient portal password",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-09 23:28",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-B6AE",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "My head hurts and I want to fix my portal account",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:44",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-D3E0",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "Reset my patient portal password",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:44",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-0A76",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support",
+      "subject": "Patient Query",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:44",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-6B82",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support",
+      "subject": "Patient Query",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:44",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-B8A1",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support",
+      "subject": "Patient Query",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:44",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-8173",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "My head hurts and I want to fix my portal account",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:44",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-AF2D",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "Reset my patient portal password",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:44",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-1768",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "My head hurts and I want to fix my portal account",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:35",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-E5A1",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "Reset my patient portal password",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:35",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-9001",
+      "patient_id": "P-1001",
+      "category": "Billing Inquiry",
+      "subject": "Question regarding insurance co-pay for Lab LAB-8821",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-02"
+    },
+    {
+      "ticket_id": "TCK-9002",
+      "patient_id": "P-1002",
+      "category": "Portal Tech Support",
+      "subject": "Password reset request for patient portal",
+      "status": "Resolved",
+      "priority": "Low",
+      "created_at": "2026-07-28"
+    },
+    {
+      "ticket_id": "TCK-3D17",
+      "patient_id": "P-1001",
+      "category": "Portal Support / Password Reset",
+      "subject": "Reset my patient portal password",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:15",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-40C0",
+      "patient_id": "P-1001",
+      "category": "Portal Support / Password Reset",
+      "subject": "My head hurts and I want to fix my portal account",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:15",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-DA35",
+      "patient_id": "P-1001",
+      "category": "Portal Support / Password Reset",
+      "subject": "My SSN is [SSN_REDACTED] and credit card is [Credit Card_REDACTED]. Please reset my password and check confidential HIV report.",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:15",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-9649",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support",
+      "subject": "Patient Query",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:15",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-8FF2",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support",
+      "subject": "Patient Query",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:15",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-6614",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support",
+      "subject": "Patient Query",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:15",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-340F",
+      "patient_id": "P-1001",
+      "category": "Portal Support / Password Reset",
+      "subject": "Reset my patient portal password",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:15",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-4864",
+      "patient_id": "P-1001",
+      "category": "Portal Support / Password Reset",
+      "subject": "My head hurts and I want to fix my portal account",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:15",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-1F1A",
+      "patient_id": "P-1001",
+      "category": "Portal Support / Password Reset",
+      "subject": "My SSN is [SSN_REDACTED] and credit card is [Credit Card_REDACTED]. Please reset my password and check confidential HIV report.",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:15",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-FCAC",
+      "patient_id": "P-1001",
+      "category": "Portal Support / Password Reset",
+      "subject": "Reset my patient portal password",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:15",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-BD70",
+      "patient_id": "P-1001",
+      "category": "Portal Support / Password Reset",
+      "subject": "My head hurts and I want to fix my portal account",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:15",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-1FAB",
+      "patient_id": "P-1001",
+      "category": "Portal Support / Password Reset",
+      "subject": "My SSN is [SSN_REDACTED] and credit card is [Credit Card_REDACTED]. Please reset my password and check confidential HIV report.",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:15",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-6343",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support",
+      "subject": "Patient Query",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:15",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-F25D",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support",
+      "subject": "Patient Query",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:15",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-2BA3",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support",
+      "subject": "Patient Query",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-603D",
+      "patient_id": "P-1001",
+      "category": "Portal Support / Password Reset",
+      "subject": "Reset my patient portal password",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-E0D1",
+      "patient_id": "P-1001",
+      "category": "Portal Support / Password Reset",
+      "subject": "My head hurts and I want to fix my portal account",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-D451",
+      "patient_id": "P-1001",
+      "category": "Portal Support / Password Reset",
+      "subject": "My SSN is [SSN_REDACTED] and credit card is [Credit Card_REDACTED]. Please reset my password and check confidential HIV report.",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-24EF",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "Reset my patient portal password",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-9EE7",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "My head hurts and I want to fix my portal account",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-945B",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "Create a billing ticket for my last visit and show me all my existing tickets",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-E3DA",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "My SSN is [SSN_REDACTED] and credit card is [Credit Card_REDACTED]. Please reset my password and check confidential HIV report.",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-0EF5",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "Here is my private medical record number [MRN_REDACTED] and phone 555-0199. Send my blood lab results to my email.",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-FDBE",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support",
+      "subject": "Patient Query",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-EBFF",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support",
+      "subject": "Patient Query",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-F16E",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support",
+      "subject": "Patient Query",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-D1B8",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support",
+      "subject": "Patient Query",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-0CCB",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support",
+      "subject": "Patient Query",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-82B9",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "Reset my patient portal password",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-5377",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "My head hurts and I want to fix my portal account",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-DC1B",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "Create a billing ticket for my last visit and show me all my existing tickets",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-6229",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "My SSN is [SSN_REDACTED] and credit card is [Credit Card_REDACTED]. Please reset my password and check confidential HIV report.",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-8EE8",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "Here is my private medical record number [MRN_REDACTED] and phone 555-0199. Send my blood lab results to my email.",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-EB07",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "Reset my patient portal password",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-A181",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "My head hurts and I want to fix my portal account",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-697D",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support",
+      "subject": "Patient Query",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-B29B",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support",
+      "subject": "Patient Query",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-ADE0",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support",
+      "subject": "Patient Query",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-CF56",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "Reset my patient portal password",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-AC68",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "My head hurts and I want to fix my portal account",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:16",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-E543",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "Reset my patient portal password",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:18",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-444B",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "Reset my patient portal password",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:19",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-1DF1",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "Reset my patient portal password",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:19",
+      "details": ""
+    },
+    {
+      "ticket_id": "TCK-6F7F",
+      "patient_id": "P-1001",
+      "category": "Portal Tech Support / Security",
+      "subject": "Reset my patient portal password",
+      "status": "Open",
+      "priority": "Medium",
+      "created_at": "2026-08-08 15:19",
+      "details": ""
+    }
+  ]
+}

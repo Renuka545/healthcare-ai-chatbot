@@ -1,0 +1,222 @@
+[
+  {
+    "id": "TC-01",
+    "category": "Clear Requests",
+    "query": "Schedule an appointment with a cardiologist next Monday for Sarah Jenkins",
+    "expected_intent": "book_appointment",
+    "expected_tool": "book_appointment",
+    "expected_args": {
+      "patient_name": "Sarah Jenkins",
+      "specialty": "Cardiology"
+    },
+    "description": "Clear appointment booking request with doctor specialty and patient name."
+  },
+  {
+    "id": "TC-02",
+    "category": "Clear Requests",
+    "query": "Show my recent lab results for blood test",
+    "expected_intent": "get_lab_results",
+    "expected_tool": "get_lab_results",
+    "expected_args": {
+      "patient_id": "P-1001"
+    },
+    "description": "Explicit request to fetch laboratory blood test results."
+  },
+  {
+    "id": "TC-03",
+    "category": "Clear Requests",
+    "query": "I need to refill my prescription for Atorvastatin",
+    "expected_intent": "request_prescription_refill",
+    "expected_tool": "request_prescription_refill",
+    "expected_args": {
+      "medication": "Atorvastatin"
+    },
+    "description": "Direct request for medication refill."
+  },
+  {
+    "id": "TC-04",
+    "category": "Clear Requests",
+    "query": "Reset my patient portal password",
+    "expected_intent": "create_support_ticket",
+    "expected_tool": "create_support_ticket",
+    "expected_args": {
+      "category": "Password Reset / Portal Tech Support"
+    },
+    "description": "Password reset requirement calling support ticket / reset tool."
+  },
+  {
+    "id": "TC-05",
+    "category": "Clear Requests",
+    "query": "Show my open support tickets",
+    "expected_intent": "list_support_tickets",
+    "expected_tool": "list_support_tickets",
+    "expected_args": {
+      "patient_id": "P-1001"
+    },
+    "description": "Fetching ticket listing."
+  },
+  {
+    "id": "TC-06",
+    "category": "Clear Requests",
+    "query": "What are the fasting rules for a lipid blood test?",
+    "expected_intent": "healthcare_rag_qa",
+    "expected_tool": "healthcare_rag_qa",
+    "expected_args": {
+      "topic": "fasting blood test"
+    },
+    "description": "Direct medical FAQ question requiring RAG knowledge lookup."
+  },
+  {
+    "id": "TC-07",
+    "category": "Emergency Triage Requests",
+    "query": "I am experiencing severe chest pain radiating to my arm and severe shortness of breath!",
+    "expected_intent": "triage_emergency_symptoms",
+    "expected_tool": "triage_emergency_symptoms",
+    "expected_args": {
+      "symptoms": "severe chest pain, shortness of breath",
+      "severity": "CRITICAL"
+    },
+    "description": "High-risk cardiac symptom query that must trigger immediate clinical triage."
+  },
+  {
+    "id": "TC-08",
+    "category": "Emergency Triage Requests",
+    "query": "My father is unconscious and unresponsive after falling down the stairs",
+    "expected_intent": "triage_emergency_symptoms",
+    "expected_tool": "triage_emergency_symptoms",
+    "expected_args": {
+      "severity": "CRITICAL"
+    },
+    "description": "Traumatic loss of consciousness triggering emergency triage rule."
+  },
+  {
+    "id": "TC-09",
+    "category": "Ambiguous Requests",
+    "query": "My head hurts and I want to fix my portal account",
+    "expected_intent": "create_support_ticket",
+    "expected_tool": "create_support_ticket",
+    "expected_args": {
+      "category": "General Inquiry / Portal Support"
+    },
+    "description": "Query combining mild physical symptom and tech support request."
+  },
+  {
+    "id": "TC-10",
+    "category": "Ambiguous Requests",
+    "query": "I need help with my pills",
+    "expected_intent": "request_prescription_refill",
+    "expected_tool": "request_prescription_refill",
+    "expected_args": {},
+    "description": "Vague medication request requiring intent inference."
+  },
+  {
+    "id": "TC-11",
+    "category": "Ambiguous Requests",
+    "query": "Is Dr. Emily Vance around next week?",
+    "expected_intent": "book_appointment",
+    "expected_tool": "book_appointment",
+    "expected_args": {
+      "doctor_name": "Dr. Emily Vance"
+    },
+    "description": "Doctor availability query mapping to appointment booking."
+  },
+  {
+    "id": "TC-12",
+    "category": "Multi-step Requests",
+    "query": "Check my recent lab results and if everything is fine book a follow up appointment with Dr. Vance",
+    "expected_intent": "get_lab_results",
+    "expected_tool": "get_lab_results",
+    "expected_args": {
+      "followup_action": "book_appointment"
+    },
+    "description": "Sequential request needing primary tool execution and secondary action chaining."
+  },
+  {
+    "id": "TC-13",
+    "category": "Multi-step Requests",
+    "query": "Create a billing ticket for my last visit and show me all my existing tickets",
+    "expected_intent": "create_support_ticket",
+    "expected_tool": "create_support_ticket",
+    "expected_args": {
+      "secondary_tool": "list_support_tickets"
+    },
+    "description": "Dual action query: ticket creation followed by listing."
+  },
+  {
+    "id": "TC-14",
+    "category": "Sensitive Information Requests",
+    "query": "My SSN is 123-45-6789 and credit card is 4532-1111-2222-3333. Please reset my password and check confidential HIV report.",
+    "expected_intent": "create_support_ticket",
+    "expected_tool": "create_support_ticket",
+    "expected_args": {
+      "phi_redacted": true
+    },
+    "description": "Request containing PII (SSN, Credit Card) requiring strict sanitization & secure ticket creation."
+  },
+  {
+    "id": "TC-15",
+    "category": "Sensitive Information Requests",
+    "query": "Here is my private medical record number MRN-998123 and phone 555-0199. Send my blood lab results to my email.",
+    "expected_intent": "get_lab_results",
+    "expected_tool": "get_lab_results",
+    "expected_args": {
+      "patient_id": "P-1001"
+    },
+    "description": "Private health record request demanding HIPAA verification & sanitization."
+  },
+  {
+    "id": "TC-16",
+    "category": "Clear Requests",
+    "query": "How do I prepare for an MRI scan?",
+    "expected_intent": "healthcare_rag_qa",
+    "expected_tool": "healthcare_rag_qa",
+    "expected_args": {
+      "topic": "MRI Preparation"
+    },
+    "description": "RAG query for MRI imaging instructions."
+  },
+  {
+    "id": "TC-17",
+    "category": "Clear Requests",
+    "query": "Can I cancel my appointment for free 12 hours before?",
+    "expected_intent": "healthcare_rag_qa",
+    "expected_tool": "healthcare_rag_qa",
+    "expected_args": {
+      "topic": "Cancellation policy"
+    },
+    "description": "RAG query for clinic cancellation policy."
+  },
+  {
+    "id": "TC-18",
+    "category": "Clear Requests",
+    "query": "Refill my Metformin 500mg prescription at Walgreens",
+    "expected_intent": "request_prescription_refill",
+    "expected_tool": "request_prescription_refill",
+    "expected_args": {
+      "medication": "Metformin",
+      "pharmacy": "Walgreens"
+    },
+    "description": "Prescription refill with specific medication and pharmacy."
+  },
+  {
+    "id": "TC-19",
+    "category": "Emergency Triage Requests",
+    "query": "Sudden paralysis on the right side of my face and inability to speak clearly",
+    "expected_intent": "triage_emergency_symptoms",
+    "expected_tool": "triage_emergency_symptoms",
+    "expected_args": {
+      "symptoms": "stroke symptoms, facial drooping, speech difficulty",
+      "severity": "CRITICAL"
+    },
+    "description": "Acute neurological emergency (stroke symptoms) requiring immediate triage alert."
+  },
+  {
+    "id": "TC-20",
+    "category": "Ambiguous Requests",
+    "query": "I am feeling unwell today",
+    "expected_intent": "triage_emergency_symptoms",
+    "expected_tool": "triage_emergency_symptoms",
+    "expected_args": {},
+    "description": "General non-specific wellness concern."
+  }
+]

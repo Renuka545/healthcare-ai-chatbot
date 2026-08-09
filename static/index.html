@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthPulse AI - Intelligent Tool Selection & Action Modal</title>
+    <!-- Google Fonts & FontAwesome icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <div class="brand-text">
+                    <h2>HealthPulse AI</h2>
+                    <span>Intelligent Tool Router</span>
+                </div>
+            </div>
+
+            <nav class="nav-menu">
+                <button class="nav-btn active" data-tab="chat-tab">
+                    <i class="fa-solid fa-comments"></i>
+                    <span>Live Chatbot</span>
+                </button>
+                <button class="nav-btn" data-tab="compare-tab">
+                    <i class="fa-solid fa-sliders"></i>
+                    <span>Intent Benchmarker</span>
+                </button>
+                <button class="nav-btn" data-tab="eval-tab">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Dataset Evaluator</span>
+                </button>
+                <button class="nav-btn" data-tab="rag-tab">
+                    <i class="fa-solid fa-book-medical"></i>
+                    <span>RAG Knowledge Search</span>
+                </button>
+                <button class="nav-btn" data-tab="tools-tab">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <span>Tool Registry</span>
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="system-status">
+                    <span class="pulse-dot"></span>
+                    <span>FastAPI Backend Active</span>
+                </div>
+                <div class="mode-badge">Hybrid Routing Engaged</div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Header Bar -->
+            <header class="top-header">
+                <div class="header-title">
+                    <h1 id="tab-title">Healthcare AI Chatbot</h1>
+                    <p id="tab-subtitle">Intelligent Tool Selection, Action Modal & Patient History</p>
+                </div>
+                <div class="header-actions">
+                    <div class="patient-pill">
+                        <i class="fa-solid fa-user-circle"></i>
+                        <span>Patient: Sarah Jenkins (P-1001)</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- TAB 1: LIVE CHATBOT -->
+            <section id="chat-tab" class="tab-pane active">
+                <div class="chat-layout">
+                    <!-- Chat Console -->
+                    <div class="chat-card glass-panel">
+                        <div class="chat-header">
+                            <div class="chat-title">
+                                <i class="fa-solid fa-robot"></i>
+                                <span>Clinical AI Assistant</span>
+                            </div>
+                            <div class="mode-selector">
+                                <label for="classifier-select"><i class="fa-solid fa-brain"></i> Classifier Mode:</label>
+                                <select id="classifier-select">
+                                    <option value="hybrid" selected>Hybrid (Rule + LLM)</option>
+                                    <option value="llm">LLM-Based Only</option>
+                                    <option value="rule">Rule-Based Only</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Chat Messages Container -->
+                        <div class="chat-messages" id="chat-messages">
+                            <div class="message system-msg">
+                                <div class="avatar"><i class="fa-solid fa-user-doctor"></i></div>
+                                <div class="msg-content">
+                                    <p>Hello Sarah! I am your <strong>HealthPulse AI Assistant</strong>. How can I help you today?</p>
+                                    <span class="hint">Try asking: "Book an appointment with a specialist", "Check my lab results", or "Refill my medication".</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sample Preset Queries -->
+                        <div class="preset-queries">
+                            <span class="preset-label"><i class="fa-solid fa-bolt"></i> Quick Presets:</span>
+                            <button class="preset-btn" onclick="sendPreset('I need to book an appointment with a specialist for my chest tightness')">
+                                <i class="fa-solid fa-calendar-check"></i> Book Appointment (Opens Pop-up)
+                            </button>
+                            <button class="preset-btn" onclick="sendPreset('Show my recent lab results for blood test')">
+                                <i class="fa-solid fa-vial"></i> Lab Results
+                            </button>
+                            <button class="preset-btn" onclick="sendPreset('Refill my prescription for Atorvastatin 10mg')">
+                                <i class="fa-solid fa-pills"></i> Refill Rx
+                            </button>
+                            <button class="preset-btn" onclick="sendPreset('Reset my patient portal password')">
+                                <i class="fa-solid fa-key"></i> Reset Password
+                            </button>
+                            <button class="preset-btn emergency-btn" onclick="sendPreset('I am having severe crushing chest pain and shortness of breath!')">
+                                <i class="fa-solid fa-triangle-exclamation"></i> Emergency Triage
+                            </button>
+                        </div>
+
+                        <!-- Input Bar -->
+                        <div class="chat-input-bar">
+                            <input type="text" id="user-input" placeholder="Type your healthcare request or symptom inquiry..." onkeypress="handleKeyPress(event)">
+                            <button id="send-btn" onclick="sendMessage()">
+                                <span>Send</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right Sidebar: Inspector & Patient Action History Panel -->
+                    <div class="side-panel-wrapper glass-panel">
+                        <div class="panel-tabs">
+                            <button class="panel-tab-btn active" id="tab-btn-tracer" onclick="switchRightPanel('tracer')">
+                                <i class="fa-solid fa-microscope"></i> Tool Tracer
+                            </button>
+                            <button class="panel-tab-btn" id="tab-btn-history" onclick="switchRightPanel('history')">
+                                <i class="fa-solid fa-clock-rotate-left"></i> History & Activity
+                            </button>
+                        </div>
+
+                        <!-- Panel 1: Intent & Tool Execution Inspector -->
+                        <div id="panel-tracer" class="panel-content">
+                            <div id="inspector-placeholder" class="inspector-placeholder">
+                                <i class="fa-solid fa-network-wired"></i>
+                                <p>Send a message in the chat to visually inspect intent classification, tool selection, and execution parameters.</p>
+                            </div>
+
+                            <div id="inspector-content" class="inspector-content hidden">
+                                <div class="trace-box">
+                                    <span class="box-label">1. Intent Classification</span>
+                                    <div class="trace-value highlight" id="trace-intent">-</div>
+                                    <div class="trace-meta">
+                                        <span class="badge" id="trace-method">Hybrid</span>
+                                        <span class="badge confidence" id="trace-confidence">0%</span>
+                                        <span class="badge speed" id="trace-speed">0 ms</span>
+                                    </div>
+                                </div>
+
+                                <div class="trace-box">
+                                    <span class="box-label">2. Selected Tool</span>
+                                    <div class="trace-value tool-tag" id="trace-tool">-</div>
+                                    <div class="trace-reasoning" id="trace-reasoning">-</div>
+                                </div>
+
+                                <div class="trace-box">
+                                    <span class="box-label">3. Tool Arguments</span>
+                                    <pre class="json-code" id="trace-params">{}</pre>
+                                </div>
+
+                                <div class="trace-box">
+                                    <span class="box-label">4. Safety & PHI Audit</span>
+                                    <div class="audit-status">
+                                        <span class="audit-badge" id="audit-phi">PHI: Clear</span>
+                                        <span class="audit-badge" id="audit-emergency">Triage: Normal</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel 2: Patient History & Activity Timeline -->
+                        <div id="panel-history" class="panel-content hidden">
+                            <div class="history-header">
+                                <h4><i class="fa-solid fa-calendar-days"></i> Patient Activity Timeline</h4>
+                                <button class="refresh-btn" onclick="fetchPatientHistory()"><i class="fa-solid fa-rotate-right"></i> Refresh</button>
+                            </div>
+                            <div id="history-timeline-container" class="history-timeline">
+                                <p class="loading-text">Loading history timeline...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 2: INTENT BENCHMARKER -->
+            <section id="compare-tab" class="tab-pane hidden">
+                <div class="compare-layout glass-panel">
+                    <div class="panel-header">
+                        <h2>Side-by-Side Intent Method Benchmarker</h2>
+                        <p>Compare Rule-Based vs. LLM-Based vs. Hybrid intent parsing for any query.</p>
+                    </div>
+
+                    <div class="compare-input">
+                        <input type="text" id="compare-query-input" value="I need to check my blood test lab results and schedule a cardiologist follow up if LDL is high" placeholder="Enter custom query to benchmark...">
+                        <button onclick="runComparison()"><i class="fa-solid fa-play"></i> Benchmark All 3 Approaches</button>
+                    </div>
+
+                    <div class="comparison-grid" id="comparison-grid">
+                        <div class="compare-card rule-card">
+                            <div class="card-title"><i class="fa-solid fa-code"></i> Rule-Based Approach</div>
+                            <div class="metric"><strong>Tool:</strong> <span id="rule-tool">-</span></div>
+                            <div class="metric"><strong>Confidence:</strong> <span id="rule-conf">-</span></div>
+                            <div class="metric"><strong>Speed:</strong> <span id="rule-speed" class="fast">-</span></div>
+                            <div class="reasoning-text" id="rule-reasoning">-</div>
+                        </div>
+
+                        <div class="compare-card llm-card">
+                            <div class="card-title"><i class="fa-solid fa-brain"></i> LLM-Based Approach</div>
+                            <div class="metric"><strong>Tool:</strong> <span id="llm-tool">-</span></div>
+                            <div class="metric"><strong>Confidence:</strong> <span id="llm-conf">-</span></div>
+                            <div class="metric"><strong>Speed:</strong> <span id="llm-speed" class="slow">-</span></div>
+                            <div class="reasoning-text" id="llm-reasoning">-</div>
+                        </div>
+
+                        <div class="compare-card hybrid-card">
+                            <div class="card-title"><i class="fa-solid fa-wand-magic-sparkles"></i> Hybrid Approach (Selected)</div>
+                            <div class="metric"><strong>Tool:</strong> <span id="hybrid-tool">-</span></div>
+                            <div class="metric"><strong>Confidence:</strong> <span id="hybrid-conf">-</span></div>
+                            <div class="metric"><strong>Speed:</strong> <span id="hybrid-speed" class="opt">-</span></div>
+                            <div class="reasoning-text" id="hybrid-reasoning">-</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 3: DATASET EVALUATOR -->
+            <section id="eval-tab" class="tab-pane hidden">
+                <div class="eval-layout glass-panel">
+                    <div class="eval-top-bar">
+                        <div>
+                            <h2>Evaluation Dataset Runner & Metrics</h2>
+                            <p>Automated benchmarking against 20+ curated test cases (Clear, Ambiguous, Multi-step, Sensitive, Emergency).</p>
+                        </div>
+                        <button class="run-eval-btn" onclick="executeFullEvaluation()">
+                            <i class="fa-solid fa-play"></i> Run Full Dataset Evaluation
+                        </button>
+                    </div>
+
+                    <div class="stats-row">
+                        <div class="stat-card">
+                            <span class="stat-num" id="stat-cases">20</span>
+                            <span class="stat-label">Total Test Cases</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num success" id="stat-intent-acc">85%</span>
+                            <span class="stat-label">Intent Accuracy</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num success" id="stat-tool-acc">70%</span>
+                            <span class="stat-label">Tool Selection Accuracy</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num accent" id="stat-latency">1.05 ms</span>
+                            <span class="stat-label">Avg Execution Latency</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num accent" id="stat-quality">0.81 / 1.0</span>
+                            <span class="stat-label">Response Quality Score</span>
+                        </div>
+                    </div>
+
+                    <div class="results-table-wrapper">
+                        <table class="results-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Category</th>
+                                    <th>User Query</th>
+                                    <th>Expected Tool</th>
+                                    <th>Detected Tool</th>
+                                    <th>Intent Match</th>
+                                    <th>Latency</th>
+                                </tr>
+                            </thead>
+                            <tbody id="eval-table-body">
+                                <tr><td colspan="7" class="loading-td">Click "Run Full Dataset Evaluation" to calculate live benchmark results.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 4: RAG SEARCH -->
+            <section id="rag-tab" class="tab-pane hidden">
+                <div class="rag-layout glass-panel">
+                    <div class="panel-header">
+                        <h2>Healthcare Knowledge Base RAG Inspector</h2>
+                        <p>Search clinical guidelines, preparation instructions, policies, and medical FAQs using semantic TF-IDF vector similarity.</p>
+                    </div>
+
+                    <div class="search-box">
+                        <input type="text" id="rag-query-input" value="fasting blood test rules" placeholder="Search medical knowledge base...">
+                        <button onclick="executeRAGSearch()"><i class="fa-solid fa-search"></i> Vector Search</button>
+                    </div>
+
+                    <div id="rag-results-container" class="rag-results">
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 5: TOOL REGISTRY -->
+            <section id="tools-tab" class="tab-pane hidden">
+                <div class="tools-layout glass-panel">
+                    <div class="panel-header">
+                        <h2>Available Healthcare Tools Portfolio</h2>
+                        <p>Registered FastMCP-compatible Python tools available for autonomous selection by the chatbot engine.</p>
+                    </div>
+                    <div class="tools-grid" id="tools-grid">
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- POP-UP CONFIRMATION MODAL FOR APPOINTMENT BOOKING -->
+    <div id="appointment-modal-overlay" class="modal-overlay hidden">
+        <div class="modal-card glass-panel">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <i class="fa-solid fa-calendar-plus"></i>
+                    <h3>Confirm & Schedule Doctor Appointment</h3>
+                </div>
+                <button class="close-modal-btn" onclick="closeAppointmentModal()">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <p class="modal-subtitle">Please specify your health problem, specialist department, preferred doctor, and time slot to complete your appointment booking.</p>
+
+                <div class="form-group">
+                    <label for="modal-specialty"><i class="fa-solid fa-stethoscope"></i> Specialist / Department:</label>
+                    <select id="modal-specialty" onchange="onSpecialtyChange()">
+                        <option value="Cardiology">Cardiology (Heart & Blood Pressure)</option>
+                        <option value="Internal Medicine">Internal Medicine (Primary Care & Wellness)</option>
+                        <option value="Dermatology">Dermatology (Skin & Rash Care)</option>
+                        <option value="Orthopedics">Orthopedics (Joint & Bone Health)</option>
+                        <option value="Neurology">Neurology (Brain & Headache Care)</option>
+                        <option value="Pediatrics">Pediatrics (Child Healthcare)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="modal-doctor"><i class="fa-solid fa-user-doctor"></i> Preferred Physician:</label>
+                    <select id="modal-doctor">
+                        <option value="Dr. Emily Vance">Dr. Emily Vance (Cardiology Specialist)</option>
+                        <option value="Dr. Marcus Thorne">Dr. Marcus Thorne (Internal Medicine)</option>
+                        <option value="Dr. Sarah Jenkins">Dr. Sarah Jenkins (Dermatologist)</option>
+                        <option value="Dr. Alan Grant">Dr. Alan Grant (Orthopedics Specialist)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="modal-reason"><i class="fa-solid fa-notes-medical"></i> Health Problem / Reason for Visit:</label>
+                    <textarea id="modal-reason" rows="2" placeholder="e.g. Chest tightness, blood pressure evaluation, routine annual checkup..."></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="modal-date"><i class="fa-solid fa-calendar-day"></i> Date:</label>
+                        <input type="date" id="modal-date" value="2026-08-17">
+                    </div>
+                    <div class="form-group">
+                        <label for="modal-time"><i class="fa-solid fa-clock"></i> Time Slot:</label>
+                        <select id="modal-time">
+                            <option value="09:00 AM">09:00 AM</option>
+                            <option value="10:30 AM" selected>10:30 AM</option>
+                            <option value="02:00 PM">02:00 PM</option>
+                            <option value="04:15 PM">04:15 PM</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="modal-btn cancel-btn" onclick="closeAppointmentModal()">Cancel</button>
+                <button class="modal-btn confirm-btn" onclick="confirmAppointmentBooking()">
+                    <i class="fa-solid fa-check-circle"></i> Confirm & Book Appointment
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
