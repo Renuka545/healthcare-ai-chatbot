@@ -267,3 +267,6 @@ The test dataset (`data/evaluation_dataset.json`) covers 20 test cases across 5 
 - **Emergency Triage Requests**: High-risk cardiac/neurological symptoms requiring immediate emergency triage.
 
 ---
+
+
+[Output.pdf](https://github.com/user-attachments/files/30884190/Output.pdf)
